@@ -149,7 +149,7 @@ def main(range_num=int):
 	plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
 	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
 
-	plt.legend(['Fully connected model','Multi-input model','Boosting model','SLN model', 'SLN+FN model','XGBoost model','XGBoost model with time series data','XGBoost+FN model','DNN model','CNN model','DNN+FN'], loc='lower right')
+	plt.legend(['Fully connected model','Multi-input model','Boosting model','SLN model', 'SLN+FN model','XGBoost model','XGBoost model with time series data','XGBoost+FN model','DNN model','CNN model','DNN+FN model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
 	plt.savefig('cdf_comparison.pdf')
