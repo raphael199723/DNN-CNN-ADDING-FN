@@ -12,7 +12,7 @@ file_name6='xboost_wtsd_output_predict.csv'
 file_name7='XGBoost_and_FN_output_predict.csv'
 file_name8='DNN_output_predict.csv'
 file_name9='CNN_output_predict.csv'
-file_name10='CNN_output_predict.csv'
+file_name10='DNN_and_FN_output_predict.csv'
 
 
 range_num = 350
@@ -129,7 +129,7 @@ def main(range_num=int):
 
 	csv = load_data(file_name10)
 	norm_2_error = analysis_by_2_norm(csv)
-	error10 = plt_cdf(file_name10,norm_2_error,"Boosting_dropout",range_num)
+	error10 = plt_cdf(file_name10,norm_2_error,"DNN_FN",range_num)
 
 	plt.title('CDF of Localization Error')
 	new_ticks = np.linspace(0, 1.0, 11)
@@ -148,7 +148,8 @@ def main(range_num=int):
 	plt.plot(range(range_num+1), error8[:(range_num+1)], c=colors[8])
 	plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
 	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
-	plt.legend(['Fully connected model','Multi-input model','Boosting model','SLN model', 'SLN+FN model','XGBoost model','XGBoost model with time series data','XGBoost+FN model','DNN model','CNN model','Boosting model with dropout'], loc='lower right')
+
+	plt.legend(['Fully connected model','Multi-input model','Boosting model','SLN model', 'SLN+FN model','XGBoost model','XGBoost model with time series data','XGBoost+FN model','DNN model','CNN model','DNN+FN'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
 	plt.savefig('cdf_comparison.pdf')
