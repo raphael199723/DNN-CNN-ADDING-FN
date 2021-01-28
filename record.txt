@@ -1,0 +1,220 @@
+M: 842 ;sum_M: 104441.69094803305 ;MDE: 124.04001300241455 cm
+max error: 739.3220391127795
+max range: 741
+842
+fully_output_predict.csv:
+Now, we analysis Fully_connected , the total number of data is 842 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 3 .
+The number of errors within 5 centimeters is 24 .
+The number of errors within 10 centimeters is 92 .
+The number of errors within 20 centimeters is 203 .
+The number of errors within 50 centimeters is 359 .
+The number of errors within 80 centimeters is 428 .
+The number of errors within 100 centimeters is 479 .
+The number of errors within 200 centimeters is 639 .
+The number of errors within 300 centimeters is 752 .
+The number of errors within 400 centimeters is 805 .
+The maximum error is 739.3220391127795 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 78.98735506531915 centimeters .
+M: 842 ;sum_M: 106812.52843325849 ;MDE: 126.85573448130461 cm
+max error: 719.6973941160239
+max range: 721
+842
+multi-input_output_predict.csv:
+Now, we analysis Multi-input , the total number of data is 842 .
+The number of errors within 1 centimeter is 1 .
+The number of errors within 2 centimeters is 1 .
+The number of errors within 5 centimeters is 8 .
+The number of errors within 10 centimeters is 50 .
+The number of errors within 20 centimeters is 176 .
+The number of errors within 50 centimeters is 369 .
+The number of errors within 80 centimeters is 440 .
+The number of errors within 100 centimeters is 494 .
+The number of errors within 200 centimeters is 622 .
+The number of errors within 300 centimeters is 751 .
+The number of errors within 400 centimeters is 797 .
+The maximum error is 719.6973941160239 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 69.13978619905112 centimeters .
+M: 842 ;sum_M: 101751.56481079596 ;MDE: 120.84508884892631 cm
+max error: 670.4034250990746
+max range: 672
+842
+boosting_output_predict.csv:
+Now, we analysis Boosting , the total number of data is 842 .
+The number of errors within 1 centimeter is 11 .
+The number of errors within 2 centimeters is 24 .
+The number of errors within 5 centimeters is 96 .
+The number of errors within 10 centimeters is 208 .
+The number of errors within 20 centimeters is 293 .
+The number of errors within 50 centimeters is 363 .
+The number of errors within 80 centimeters is 457 .
+The number of errors within 100 centimeters is 487 .
+The number of errors within 200 centimeters is 632 .
+The number of errors within 300 centimeters is 756 .
+The number of errors within 400 centimeters is 797 .
+The maximum error is 670.4034250990746 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 72.91400818194883 centimeters .
+M: 842 ;sum_M: 92380.42619016829 ;MDE: 109.71547053464168 cm
+max error: 714.706237487998
+max range: 716
+842
+SLN_output_predict.csv:
+Now, we analysis SLN , the total number of data is 842 .
+The number of errors within 1 centimeter is 103 .
+The number of errors within 2 centimeters is 121 .
+The number of errors within 5 centimeters is 161 .
+The number of errors within 10 centimeters is 186 .
+The number of errors within 20 centimeters is 209 .
+The number of errors within 50 centimeters is 354 .
+The number of errors within 80 centimeters is 447 .
+The number of errors within 100 centimeters is 495 .
+The number of errors within 200 centimeters is 703 .
+The number of errors within 300 centimeters is 776 .
+The number of errors within 400 centimeters is 805 .
+The maximum error is 714.706237487998 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 71.45097550591322 centimeters .
+M: 82 ;sum_M: 6710.332969965933 ;MDE: 81.83332890202358 cm
+max error: 517.4940326098551
+max range: 519
+82
+SLN_and_FN_output_predict.csv:
+Now, we analysis SLN_FN , the total number of data is 82 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 0 .
+The number of errors within 5 centimeters is 0 .
+The number of errors within 10 centimeters is 6 .
+The number of errors within 20 centimeters is 31 .
+The number of errors within 50 centimeters is 46 .
+The number of errors within 80 centimeters is 53 .
+The number of errors within 100 centimeters is 57 .
+The number of errors within 200 centimeters is 75 .
+The number of errors within 300 centimeters is 79 .
+The number of errors within 400 centimeters is 80 .
+The maximum error is 517.4940326098551 centimeters .
+the index of half value: 40
+The error value of CDF 0.5 is 33.620747963607855 centimeters .
+M: 842 ;sum_M: 110388.73571963461 ;MDE: 131.10301154350904 cm
+max error: 741.7161351550872
+max range: 743
+842
+xboost_output_predict.csv:
+Now, we analysis XGBoost , the total number of data is 842 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 11 .
+The number of errors within 5 centimeters is 88 .
+The number of errors within 10 centimeters is 121 .
+The number of errors within 20 centimeters is 233 .
+The number of errors within 50 centimeters is 347 .
+The number of errors within 80 centimeters is 395 .
+The number of errors within 100 centimeters is 429 .
+The number of errors within 200 centimeters is 608 .
+The number of errors within 300 centimeters is 749 .
+The number of errors within 400 centimeters is 800 .
+The maximum error is 741.7161351550872 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 91.12990273665639 centimeters .
+M: 82 ;sum_M: 9173.80553027158 ;MDE: 111.8756771984339 cm
+max error: 426.91559886004546
+max range: 428
+82
+xboost_wtsd_output_predict.csv:
+Now, we analysis XGBoost_with time series data , the total number of data is 82 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 0 .
+The number of errors within 5 centimeters is 3 .
+The number of errors within 10 centimeters is 8 .
+The number of errors within 20 centimeters is 19 .
+The number of errors within 50 centimeters is 40 .
+The number of errors within 80 centimeters is 47 .
+The number of errors within 100 centimeters is 50 .
+The number of errors within 200 centimeters is 63 .
+The number of errors within 300 centimeters is 73 .
+The number of errors within 400 centimeters is 78 .
+The maximum error is 426.91559886004546 centimeters .
+the index of half value: 40
+The error value of CDF 0.5 is 52.436645079430434 centimeters .
+M: 82 ;sum_M: 8331.846237583359 ;MDE: 101.60788094613852 cm
+max error: 652.6248673091752
+max range: 654
+82
+XGBoost_and_FN_output_predict.csv:
+Now, we analysis XGBoost_FN , the total number of data is 82 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 0 .
+The number of errors within 5 centimeters is 0 .
+The number of errors within 10 centimeters is 1 .
+The number of errors within 20 centimeters is 11 .
+The number of errors within 50 centimeters is 41 .
+The number of errors within 80 centimeters is 49 .
+The number of errors within 100 centimeters is 52 .
+The number of errors within 200 centimeters is 66 .
+The number of errors within 300 centimeters is 77 .
+The number of errors within 400 centimeters is 80 .
+The maximum error is 652.6248673091752 centimeters .
+the index of half value: 40
+The error value of CDF 0.5 is 45.58750068276717 centimeters .
+M: 842 ;sum_M: 114421.65126662407 ;MDE: 135.89269746629938 cm
+max error: 683.1357440784789
+max range: 685
+842
+fully_output_predict_change_BN_to_dropout.csv:
+Now, we analysis Fully_connected_dropout , the total number of data is 842 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 0 .
+The number of errors within 5 centimeters is 2 .
+The number of errors within 10 centimeters is 13 .
+The number of errors within 20 centimeters is 85 .
+The number of errors within 50 centimeters is 221 .
+The number of errors within 80 centimeters is 301 .
+The number of errors within 100 centimeters is 342 .
+The number of errors within 200 centimeters is 687 .
+The number of errors within 300 centimeters is 765 .
+The number of errors within 400 centimeters is 800 .
+The maximum error is 683.1357440784789 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 114.45741841919465 centimeters .
+M: 842 ;sum_M: 125899.77650913065 ;MDE: 149.52467518899127 cm
+max error: 620.6472303402749
+max range: 622
+842
+multi-input_output_predict_change_BN_to_dropout.csv:
+Now, we analysis Multi-input_dropout , the total number of data is 842 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 0 .
+The number of errors within 5 centimeters is 0 .
+The number of errors within 10 centimeters is 16 .
+The number of errors within 20 centimeters is 74 .
+The number of errors within 50 centimeters is 235 .
+The number of errors within 80 centimeters is 308 .
+The number of errors within 100 centimeters is 348 .
+The number of errors within 200 centimeters is 667 .
+The number of errors within 300 centimeters is 722 .
+The number of errors within 400 centimeters is 782 .
+The maximum error is 620.6472303402749 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 135.8869834076605 centimeters .
+M: 842 ;sum_M: 106929.70267909589 ;MDE: 126.99489629346306 cm
+max error: 712.0529614002467
+max range: 714
+842
+boosting_output_predict_change_BN_to_dropout.csv:
+Now, we analysis Boosting_dropout , the total number of data is 842 .
+The number of errors within 1 centimeter is 0 .
+The number of errors within 2 centimeters is 1 .
+The number of errors within 5 centimeters is 11 .
+The number of errors within 10 centimeters is 81 .
+The number of errors within 20 centimeters is 152 .
+The number of errors within 50 centimeters is 287 .
+The number of errors within 80 centimeters is 367 .
+The number of errors within 100 centimeters is 429 .
+The number of errors within 200 centimeters is 658 .
+The number of errors within 300 centimeters is 758 .
+The number of errors within 400 centimeters is 803 .
+The maximum error is 712.0529614002467 centimeters .
+the index of half value: 420
+The error value of CDF 0.5 is 96.79960697347175 centimeters .
