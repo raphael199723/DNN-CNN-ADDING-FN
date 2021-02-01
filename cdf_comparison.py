@@ -13,6 +13,8 @@ file_name7='XGBoost_and_FN_output_predict.csv'
 file_name8='DNN_output_predict.csv'
 file_name9='CNN_output_predict.csv'
 file_name10='DNN_and_FN_output_predict.csv'
+file_name11='CNN_and_FN_output_predict.csv'
+file_name12='CNN1d_output_predict.csv'
 
 
 range_num = 350
@@ -67,7 +69,7 @@ def plt_cdf(path=str,data=list,name=str,range_num=int):
 	print('The number of errors within 100 centimeters is',error_counter[100],'.')
 	print('The number of errors within 200 centimeters is',error_counter[200],'.')
 	print('The number of errors within 300 centimeters is',error_counter[300],'.')
-	print('The number of errors within 400 centimeters is',error_counter[400],'.')
+#	print('The number of errors within 400 centimeters is',error_counter[400],'.')
 #	print('The number of errors within 500 centimeters is',error_counter[500],'.')
 #	print('The number of errors within 600 centimeters is',error_counter[600],'.')
 #	print('The number of errors within 700 centimeters is',error_counter[700],'.')
@@ -131,6 +133,14 @@ def main(range_num=int):
 	norm_2_error = analysis_by_2_norm(csv)
 	error10 = plt_cdf(file_name10,norm_2_error,"DNN_FN",range_num)
 
+	csv = load_data(file_name11)
+	norm_2_error = analysis_by_2_norm(csv)
+	error11 = plt_cdf(file_name11,norm_2_error,"CNN_FN",range_num)
+
+	csv = load_data(file_name12)
+	norm_2_error = analysis_by_2_norm(csv)
+	error12 = plt_cdf(file_name12,norm_2_error,"CNN1d_FN",range_num)
+
 	plt.title('CDF of Localization Error')
 	new_ticks = np.linspace(0, 1.0, 11)
 	plt.yticks(new_ticks)
@@ -148,8 +158,10 @@ def main(range_num=int):
 	plt.plot(range(range_num+1), error8[:(range_num+1)], c=colors[8])
 	plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
 	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
+	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
+	plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 
-	plt.legend(['Fully connected model','Multi-input model','Boosting model','SLN model', 'SLN+FN model','XGBoost model','XGBoost model with time series data','XGBoost+FN model','DNN model','CNN model','DNN+FN model'], loc='lower right')
+	plt.legend(['Fully connected model','Multi-input model','Boosting model','SLN model', 'SLN+FN model','XGBoost model','XGBoost model with time series data','XGBoost+FN model','DNN model','CNN model','DNN+FN model','CNN+FN model','CNN1d model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
 	plt.savefig('cdf_comparison.pdf')
