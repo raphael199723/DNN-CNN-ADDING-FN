@@ -11,10 +11,10 @@ import matplotlib.pyplot as plt
 #file_name6='xboost_wtsd_output_predict.csv'
 #file_name7='XGBoost_and_FN_output_predict.csv'
 #file_name8='DNN_output_predict.csv'
-#file_name9='CNN_output_predict.csv'
+file_name9='CNN_output_predict.csv'
 #file_name10='DNN_and_FN_output_predict.csv'
-#file_name11='CNN_and_FN_output_predict.csv'
-file_name12='CNN1d_output_predict.csv'
+file_name11='CNN_and_FN_output_predict.csv'
+#file_name12='CNN1d_output_predict.csv'
 
 
 range_num = 350
@@ -118,21 +118,21 @@ def main(range_num=int):
 	#norm_2_error = analysis_by_2_norm(csv)
 	#error8 = plt_cdf(file_name8,norm_2_error,"DNN",range_num)
 
-	#csv = load_data(file_name9)
-	#norm_2_error = analysis_by_2_norm(csv)
-	#error9 = plt_cdf(file_name9,norm_2_error,"CNN",range_num)
+	csv = load_data(file_name9)
+	norm_2_error = analysis_by_2_norm(csv)
+	error9 = plt_cdf(file_name9,norm_2_error,"CNN",range_num)
 
 	#csv = load_data(file_name10)
 	#norm_2_error = analysis_by_2_norm(csv)
 	#error10 = plt_cdf(file_name10,norm_2_error,"DNN_FN",range_num)
 
-	#csv = load_data(file_name11)
-	#norm_2_error = analysis_by_2_norm(csv)
-	#error11 = plt_cdf(file_name11,norm_2_error,"CNN_FN",range_num)
-
-	csv = load_data(file_name12)
+	csv = load_data(file_name11)
 	norm_2_error = analysis_by_2_norm(csv)
-	error12 = plt_cdf(file_name12,norm_2_error,"CNN1d_FN",range_num)
+	error11 = plt_cdf(file_name11,norm_2_error,"CNN_FN",range_num)
+
+	#csv = load_data(file_name12)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error12 = plt_cdf(file_name12,norm_2_error,"CNN1d",range_num)
 
 	plt.title('CDF of Localization Error')
 	new_ticks = np.linspace(0, 1.0, 11)
@@ -149,10 +149,10 @@ def main(range_num=int):
 	#plt.plot(range(range_num+1), error6[:(range_num+1)], c=colors[6])
 	#plt.plot(range(range_num+1), error7[:(range_num+1)], c=colors[7])
 	#plt.plot(range(range_num+1), error8[:(range_num+1)], c=colors[8])
-	#plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
+	plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
 	#plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
-	#plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
-	plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
+	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
+	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 
 	plt.legend(['CNN1d model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
