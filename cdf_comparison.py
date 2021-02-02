@@ -154,7 +154,7 @@ def main(range_num=int):
 	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
 	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 
-	plt.legend(['CNN1d model'], loc='lower right')
+	plt.legend(['CNN model','CNN+FN model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
 	plt.savefig('CNN VS CNN+FN.pdf')
