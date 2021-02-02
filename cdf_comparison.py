@@ -2,18 +2,18 @@ import numpy as np
 import pandas as pd
 import sys, os, math
 import matplotlib.pyplot as plt
-file_name='fully_output_predict.csv'
-file_name1='multi-input_output_predict.csv'
-file_name2='boosting_output_predict.csv'
-file_name3='SLN_output_predict.csv'
-file_name4='SLN_and_FN_output_predict.csv'
-file_name5='xboost_output_predict.csv'
-file_name6='xboost_wtsd_output_predict.csv'
-file_name7='XGBoost_and_FN_output_predict.csv'
-file_name8='DNN_output_predict.csv'
-file_name9='CNN_output_predict.csv'
-file_name10='DNN_and_FN_output_predict.csv'
-file_name11='CNN_and_FN_output_predict.csv'
+#file_name='fully_output_predict.csv'
+#file_name1='multi-input_output_predict.csv'
+#file_name2='boosting_output_predict.csv'
+#file_name3='SLN_output_predict.csv'
+#file_name4='SLN_and_FN_output_predict.csv'
+#file_name5='xboost_output_predict.csv'
+#file_name6='xboost_wtsd_output_predict.csv'
+#file_name7='XGBoost_and_FN_output_predict.csv'
+#file_name8='DNN_output_predict.csv'
+#file_name9='CNN_output_predict.csv'
+#file_name10='DNN_and_FN_output_predict.csv'
+#file_name11='CNN_and_FN_output_predict.csv'
 file_name12='CNN1d_output_predict.csv'
 
 
@@ -89,53 +89,46 @@ def plt_cdf(path=str,data=list,name=str,range_num=int):
 	return error_counter
 
 def main(range_num=int):
-	csv = load_data(file_name)
-	norm_2_error = analysis_by_2_norm(csv)
-	error = plt_cdf(file_name,norm_2_error,"Fully_connected",range_num)
 
-	csv = load_data(file_name1)
-	norm_2_error = analysis_by_2_norm(csv)
-	error1 = plt_cdf(file_name1,norm_2_error,"Multi-input",range_num)
+	#csv = load_data(file_name2)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error2 = plt_cdf(file_name2,norm_2_error,"Boosting",range_num)
 
-	csv = load_data(file_name2)
-	norm_2_error = analysis_by_2_norm(csv)
-	error2 = plt_cdf(file_name2,norm_2_error,"Boosting",range_num)
+	#csv = load_data(file_name3)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error3 = plt_cdf(file_name3,norm_2_error,"SLN",range_num)
 
-	csv = load_data(file_name3)
-	norm_2_error = analysis_by_2_norm(csv)
-	error3 = plt_cdf(file_name3,norm_2_error,"SLN",range_num)
+	#csv = load_data(file_name4)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error4 = plt_cdf(file_name4,norm_2_error,"SLN_FN",range_num)
 
-	csv = load_data(file_name4)
-	norm_2_error = analysis_by_2_norm(csv)
-	error4 = plt_cdf(file_name4,norm_2_error,"SLN_FN",range_num)
+	#csv = load_data(file_name5)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error5 = plt_cdf(file_name5,norm_2_error,"XGBoost",range_num)
 
-	csv = load_data(file_name5)
-	norm_2_error = analysis_by_2_norm(csv)
-	error5 = plt_cdf(file_name5,norm_2_error,"XGBoost",range_num)
+	#csv = load_data(file_name6)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error6 = plt_cdf(file_name6,norm_2_error,"XGBoost_with time series data",range_num)
 
-	csv = load_data(file_name6)
-	norm_2_error = analysis_by_2_norm(csv)
-	error6 = plt_cdf(file_name6,norm_2_error,"XGBoost_with time series data",range_num)
+	#csv = load_data(file_name7)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error7 = plt_cdf(file_name7,norm_2_error,"XGBoost_FN",range_num)
 
-	csv = load_data(file_name7)
-	norm_2_error = analysis_by_2_norm(csv)
-	error7 = plt_cdf(file_name7,norm_2_error,"XGBoost_FN",range_num)
+	#csv = load_data(file_name8)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error8 = plt_cdf(file_name8,norm_2_error,"DNN",range_num)
 
-	csv = load_data(file_name8)
-	norm_2_error = analysis_by_2_norm(csv)
-	error8 = plt_cdf(file_name8,norm_2_error,"DNN",range_num)
+	#csv = load_data(file_name9)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error9 = plt_cdf(file_name9,norm_2_error,"CNN",range_num)
 
-	csv = load_data(file_name9)
-	norm_2_error = analysis_by_2_norm(csv)
-	error9 = plt_cdf(file_name9,norm_2_error,"CNN",range_num)
+	#csv = load_data(file_name10)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error10 = plt_cdf(file_name10,norm_2_error,"DNN_FN",range_num)
 
-	csv = load_data(file_name10)
-	norm_2_error = analysis_by_2_norm(csv)
-	error10 = plt_cdf(file_name10,norm_2_error,"DNN_FN",range_num)
-
-	csv = load_data(file_name11)
-	norm_2_error = analysis_by_2_norm(csv)
-	error11 = plt_cdf(file_name11,norm_2_error,"CNN_FN",range_num)
+	#csv = load_data(file_name11)
+	#norm_2_error = analysis_by_2_norm(csv)
+	#error11 = plt_cdf(file_name11,norm_2_error,"CNN_FN",range_num)
 
 	csv = load_data(file_name12)
 	norm_2_error = analysis_by_2_norm(csv)
@@ -147,24 +140,24 @@ def main(range_num=int):
 	plt.ylabel('CDF')
 	plt.xlabel('Error (cm)')
 	colors = ['r', 'c', 'm','lime', 'k','darkgray','aqua','darkorange','darksalmon','dodgerblue','indigo','lawngreen','cyan','gold']
-	plt.plot(range(range_num+1), error[:(range_num+1)], c=colors[0])
-	plt.plot(range(range_num+1), error1[:(range_num+1)], c=colors[1])
-	plt.plot(range(range_num+1), error2[:(range_num+1)], c=colors[2])
-	plt.plot(range(range_num+1), error3[:(range_num+1)], c=colors[3])
-	plt.plot(range(range_num+1), error4[:(range_num+1)], c=colors[4])
-	plt.plot(range(range_num+1), error5[:(range_num+1)], c=colors[5])
-	plt.plot(range(range_num+1), error6[:(range_num+1)], c=colors[6])
-	plt.plot(range(range_num+1), error7[:(range_num+1)], c=colors[7])
-	plt.plot(range(range_num+1), error8[:(range_num+1)], c=colors[8])
-	plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
-	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
-	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
+	#plt.plot(range(range_num+1), error[:(range_num+1)], c=colors[0])
+	#plt.plot(range(range_num+1), error1[:(range_num+1)], c=colors[1])
+	#plt.plot(range(range_num+1), error2[:(range_num+1)], c=colors[2])
+	#plt.plot(range(range_num+1), error3[:(range_num+1)], c=colors[3])
+	#plt.plot(range(range_num+1), error4[:(range_num+1)], c=colors[4])
+	#plt.plot(range(range_num+1), error5[:(range_num+1)], c=colors[5])
+	#plt.plot(range(range_num+1), error6[:(range_num+1)], c=colors[6])
+	#plt.plot(range(range_num+1), error7[:(range_num+1)], c=colors[7])
+	#plt.plot(range(range_num+1), error8[:(range_num+1)], c=colors[8])
+	#plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
+	#plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
+	#plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
 	plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 
-	plt.legend(['Fully connected model','Multi-input model','Boosting model','SLN model', 'SLN+FN model','XGBoost model','XGBoost model with time series data','XGBoost+FN model','DNN model','CNN model','DNN+FN model','CNN+FN model','CNN1d model'], loc='lower right')
+	plt.legend(['CNN1d model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
-	plt.savefig('cdf_comparison.pdf')
+	plt.savefig('CNN VS CNN+FN.pdf')
 	plt.show()
 
 if __name__ == "__main__":
