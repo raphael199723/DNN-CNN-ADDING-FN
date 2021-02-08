@@ -83,7 +83,7 @@ def plt_cdf(path=str,data=list,name=str,range_num=int):
 	plt.yticks(new_ticks)
 	plt.ylabel('CDF')
 	plt.xlabel('Error (cm)')
-	plt.plot(range(int(range_num+1))[:350], error_counter[:350])
+	plt.plot(range(int(range_num+1))[:500], error_counter[:500])
 	plt.savefig(name+'_cdf.pdf')
 	plt.show()
 	return error_counter
