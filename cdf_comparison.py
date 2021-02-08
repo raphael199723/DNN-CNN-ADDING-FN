@@ -86,6 +86,7 @@ def plt_cdf(path=str,data=list,name=str,range_num=int):
 	plt.plot(range(int(range_num+1))[:500], error_counter[:500])
 	plt.savefig(name+'_cdf.pdf')
 	plt.show()
+	print("Check_main: ",range_num)
 	return error_counter
 
 def main(range_num=int):
@@ -129,7 +130,8 @@ def main(range_num=int):
 	csv = load_data(file_name11)
 	norm_2_error = analysis_by_2_norm(csv)
 	error11 = plt_cdf(file_name11,norm_2_error,"CNN_FN",range_num)
-
+	print("Check_main: ",range_num)
+	
 	#csv = load_data(file_name12)
 	#norm_2_error = analysis_by_2_norm(csv)
 	#error12 = plt_cdf(file_name12,norm_2_error,"CNN1d",range_num)
