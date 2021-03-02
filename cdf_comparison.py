@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 #file_name6='xboost_wtsd_output_predict.csv'
 #file_name7='XGBoost_and_FN_output_predict.csv'
 #file_name8='DNN_output_predict.csv'
-file_name9='CNN_output_predict.csv'
+file_name9='CNN1d_output_predict.csv'
 #file_name10='DNN_and_FN_output_predict.csv'
 file_name11='CNN_and_FN_output_predict.csv'
 #file_name12='CNN1d_output_predict.csv'
@@ -120,7 +120,7 @@ def main(range_num=int):
 
 	csv = load_data(file_name9)
 	norm_2_error = analysis_by_2_norm(csv)
-	error9 = plt_cdf(file_name9,norm_2_error,"CNN",range_num)
+	error9 = plt_cdf(file_name9,norm_2_error,"CNN1D",range_num)
 
 	#csv = load_data(file_name10)
 	#norm_2_error = analysis_by_2_norm(csv)
@@ -154,10 +154,10 @@ def main(range_num=int):
 	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
 	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 
-	plt.legend(['CNN model','CNN+FN model'], loc='lower right')
+	plt.legend(['CNN1D model','CNN+FN model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
-	plt.savefig('CNN VS CNN+FN.pdf')
+	plt.savefig('CNN1D VS CNN+FN.pdf')
 	plt.show()
 
 if __name__ == "__main__":
