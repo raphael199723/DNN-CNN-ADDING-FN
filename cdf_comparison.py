@@ -17,7 +17,7 @@ file_name11='CNN_and_FN_output_predict.csv'
 #file_name12='CNN1d_output_predict.csv'
 
 
-range_num = 500
+range_num = 350
 
 def load_data(path=str):
 	csv = pd.read_csv(path)
