@@ -134,25 +134,26 @@ def main(range_num=int):
 	#norm_2_error = analysis_by_2_norm(csv)
 	#error12 = plt_cdf(file_name12,norm_2_error,"CNN1d",range_num)
 
-	plt.title('CDF of Localization Error')
+	#plt.title('CDF of Localization Error')
+	plt.title('4 Best Model')
 	new_ticks = np.linspace(0, 1.0, 11)
 	plt.yticks(new_ticks)
 	plt.ylabel('CDF')
 	plt.xlabel('Error (cm)')
-	#colors = ['r', 'c', 'm','lime', 'k','darkgray','aqua','darkorange','darksalmon','dodgerblue','indigo','lawngreen','cyan','gold']
-	colour = ['r','orange','yellow','green','blue','purple','darkgray','aqua','darkorange','darksalmon','indigo','gold']
+	colors = ['r', 'c', 'm','lime', 'k','darkgray','aqua','darkorange','darksalmon','dodgerblue','indigo','lawngreen','cyan','gold']
+	#colour = ['r','orange','yellow','green','blue','purple','darkgray','aqua','darkorange','darksalmon','indigo','gold']
 	#plt.plot(range(range_num+1), error[:(range_num+1)], c=colors[0])
 	#plt.plot(range(range_num+1), error1[:(range_num+1)], c=colors[1])
 	#plt.plot(range(range_num+1), error2[:(range_num+1)], c=colors[2])
 	#plt.plot(range(range_num+1), error3[:(range_num+1)], c=colors[3])
-	plt.plot(range(range_num+1), error4[:(range_num+1)], c=colour[1])
+	plt.plot(range(range_num+1), error4[:(range_num+1)], c=colors[4])
 	#plt.plot(range(range_num+1), error5[:(range_num+1)], c=colors[5])
 	#plt.plot(range(range_num+1), error6[:(range_num+1)], c=colors[6])
-	plt.plot(range(range_num+1), error7[:(range_num+1)], c=colour[2])
+	plt.plot(range(range_num+1), error7[:(range_num+1)], c=colors[7])
 	#plt.plot(range(range_num+1), error8[:(range_num+1)], c=colors[8])
 	#plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
-	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colour[3])
-	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colour[4])
+	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
+	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
 	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 
 	plt.legend(['','SLN+FN model','XGBoost+FN model','DNN+FN model','CNN2D+FN model'], loc='lower right')
