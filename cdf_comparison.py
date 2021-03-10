@@ -15,7 +15,7 @@ file_name7='XGBoost_and_FN_output_predict.csv'
 file_name10='DNN_and_FN_output_predict.csv'
 file_name11='CNN_and_FN_output_predict.csv'
 #file_name12='CNN1d_output_predict.csv'
-
+file_name13='CNN1D_and_FN_output_predict.csv'
 
 range_num = 350
 
@@ -133,9 +133,12 @@ def main(range_num=int):
 	#csv = load_data(file_name12)
 	#norm_2_error = analysis_by_2_norm(csv)
 	#error12 = plt_cdf(file_name12,norm_2_error,"CNN1d",range_num)
-
+	
+	csv = load_data(file_name13)
+	norm_2_error = analysis_by_2_norm(csv)
+	error13 = plt_cdf(file_name13,norm_2_error,"CNN1D_FN",range_num)
 	#plt.title('CDF of Localization Error')
-	plt.title('4 Best Model')
+	plt.title('5 Best Model')
 	new_ticks = np.linspace(0, 1.0, 11)
 	plt.yticks(new_ticks)
 	plt.ylabel('CDF')
@@ -155,8 +158,9 @@ def main(range_num=int):
 	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
 	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
 	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
+	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[13])
 
-	plt.legend(['','SLN+FN model','XGBoost+FN model','DNN+FN model','CNN2D+FN model'], loc='lower right')
+	plt.legend(['','SLN+FN model','XGBoost+FN model','DNN+FN model','CNN2D+FN model', 'CNN1D_FN model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
 	plt.savefig('CDF_FN.pdf')
