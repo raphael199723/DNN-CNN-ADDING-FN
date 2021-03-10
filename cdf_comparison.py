@@ -160,7 +160,7 @@ def main(range_num=int):
 	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 	plt.plot(range(range_num), error11[:(range_num)], c=colors[13])
 
-	plt.legend(['','SLN+FN model','XGBoost+FN model','DNN+FN model','CNN2D+FN model', 'CNN1D_FN model'], loc='lower right')
+	plt.legend(['SLN+FN model','XGBoost+FN model','DNN+FN model','CNN2D+FN model', 'CNN1D_FN model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
 	plt.savefig('CDF_FN.pdf')
