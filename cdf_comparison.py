@@ -17,7 +17,7 @@ file_name11='CNN_and_FN_output_predict.csv'
 #file_name12='CNN1d_output_predict.csv'
 file_name13='CNN1D_and_FN_output_predict.csv'
 
-range_num = 350
+range_num = 350 
 
 def load_data(path=str):
 	csv = pd.read_csv(path)
@@ -149,16 +149,16 @@ def main(range_num=int):
 	#plt.plot(range(range_num+1), error1[:(range_num+1)], c=colors[1])
 	#plt.plot(range(range_num+1), error2[:(range_num+1)], c=colors[2])
 	#plt.plot(range(range_num+1), error3[:(range_num+1)], c=colors[3])
-	plt.plot(range(range_num+1), error4[:(range_num+1)], c=colors[4])
+	plt.plot(range(range_num), error4[:(range_num)], c=colors[4])
 	#plt.plot(range(range_num+1), error5[:(range_num+1)], c=colors[5])
 	#plt.plot(range(range_num+1), error6[:(range_num+1)], c=colors[6])
-	plt.plot(range(range_num+1), error7[:(range_num+1)], c=colors[7])
+	plt.plot(range(range_num), error7[:(range_num)], c=colors[7])
 	#plt.plot(range(range_num+1), error8[:(range_num+1)], c=colors[8])
 	#plt.plot(range(range_num+1), error9[:(range_num+1)], c=colors[9])
-	plt.plot(range(range_num+1), error10[:(range_num+1)], c=colors[10])
-	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[11])
+	plt.plot(range(range_num), error10[:(range_num)], c=colors[10])
+	plt.plot(range(range_num), error11[:(range_num)], c=colors[11])
 	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
-	plt.plot(range(range_num+1), error11[:(range_num+1)], c=colors[13])
+	plt.plot(range(range_num), error11[:(range_num)], c=colors[13])
 
 	plt.legend(['','SLN+FN model','XGBoost+FN model','DNN+FN model','CNN2D+FN model', 'CNN1D_FN model'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
