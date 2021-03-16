@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 file_name='CNN_and_FN_output_predict.csv'
 file_name1='6Layer_CNN_and_FN_output_predict.csv'
 file_name2='1024_CNN_and_FN_output_predict.csv'
-#file_name3='SLN_output_predict.csv'
+file_name3='256_CNN_and_FN_output_predict.csv'
+file_name4='0Dropout_CNN_and_FN_output_predict.csv'
 range_num = 500
 
 def load_data(path=str):
@@ -91,11 +92,16 @@ def main(range_num=int):
 	norm_2_error = analysis_by_2_norm(csv)
 	error2 = plt_cdf(file_name2,norm_2_error,"1024_CNN2D_FN",range_num)
 
-#	csv = load_data(file_name3)
-#	norm_2_error = analysis_by_2_norm(csv)
-#	error3 = plt_cdf(file_name3,norm_2_error,"SLN",range_num)
+	csv = load_data(file_name3)
+	norm_2_error = analysis_by_2_norm(csv)
+	error3 = plt_cdf(file_name3,norm_2_error,"256_CNN2D_FN",range_num)
+
+	csv = load_data(file_name4)
+	norm_2_error = analysis_by_2_norm(csv)
+	error4 = plt_cdf(file_name4,norm_2_error,"0Dropout_CNN2D_FN",range_num)	
+
 	#plt.title('CDF of Localization Error')
-	plt.title('Origin VS FN')
+	plt.title('Diffrent NN in CNN2D+FN')
 	new_ticks = np.linspace(0, 1.0, 11)
 	plt.yticks(new_ticks)
 	plt.ylabel('CDF')
@@ -105,8 +111,8 @@ def main(range_num=int):
 	plt.plot(range(range_num+1), error[:(range_num+1)], c=colors[0])
 	plt.plot(range(range_num+1), error1[:(range_num+1)], c=colors[1])
 	plt.plot(range(range_num+1), error2[:(range_num+1)], c=colors[2])
-#	plt.plot(range(range_num+1), error3[:(range_num+1)], c=colors[3])
-#	plt.plot(range(range_num), error4[:(range_num)], c=colors[4])
+	plt.plot(range(range_num+1), error3[:(range_num+1)], c=colors[3])
+	plt.plot(range(range_num+1), error4[:(range_num)+1], c=colors[4])
 	#plt.plot(range(range_num+1), error5[:(range_num+1)], c=colors[5])
 	#plt.plot(range(range_num+1), error6[:(range_num+1)], c=colors[6])
 	#plt.plot(range(range_num), error7[:(range_num)], c=colors[7])
@@ -117,7 +123,7 @@ def main(range_num=int):
 	#plt.plot(range(range_num+1), error12[:(range_num+1)], c=colors[12])
 	#plt.plot(range(range_num), error13[:(range_num)], c=colors[13])
 	#plt.plot(range(range_num), error14[:(range_num)], c=colors[14])
-	plt.legend(['','CNN2D_FN', '6Layer_CNN2D_FN', '1024_CNN2D_FN'], loc='lower right')
+	plt.legend(['','CNN2D_FN', '6Layer_CNN2D_FN', '1024_CNN2D_FN', '0Dropout_CNN2D_FN'], loc='lower right')
 #	plt.legend(['SLN model', 'SLN+FN model','XGBoost model','Fully connected model with dropout','Multi-input model with dropout','Boosting model with dropout'], loc='lower right')
 	plt.grid()
 	plt.savefig('CDF_CNN2D+FN.pdf')
